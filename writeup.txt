@@ -1,0 +1,1 @@
+omp_bug2.c --> "tid" should be a local variable. Or "tid" could be equal but needs to be initialized when each thread starts.
