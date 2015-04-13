@@ -1,0 +1,8 @@
+#!/bin/bash
+#SBATCH -J fang2048 	    # job name
+#SBATCH -o fang2048.o           # output and error file name (%j expands to jobID)
+#SBATCH -n 64		    # total number of mpi tasks requested
+#SBATCH -p normal 	    # queue (partition) -- normal, development, etc.
+#SBATCH -t 00:30:00         # run time (hh:mm:ss) - 1.5 hours
+#SBATCH -A TG-ASC150003     # account number
+ibrun ./ssort 2048000 	    # run the MPI executable named a.out

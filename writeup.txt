@@ -1,4 +1,6 @@
-omp_bug2.c --> "tid" should be a local variable. Or "tid" could be equal but needs to be initialized when each thread starts. We could also make "tid" private.
+omp_bug2.c --> "tid" should be a local variable. Also "total" is dangerous
+variable because everybody writes on it at same time. Need to use reduction
+here
 
 omp_bug3.c --> A barrier is set in "print_results" function. But
 "print_results" is called in "omp section" where only on thread sees
