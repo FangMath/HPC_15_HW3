@@ -38,6 +38,7 @@ for (i=0; i<N; i++)
     {
     #pragma omp section
       {
+    printf("Thread %d here...\n",tid);
       section = 1;
       for (i=0; i<N; i++)
         c[i] = a[i] * b[i];
@@ -81,10 +82,10 @@ void print_results(float array[N], int tid, int section)
       }
     }
     printf("\n");
+    printf("Thread %d done and synchronized.\n", tid); 
   } /*** end of critical ***/
 
-  #pragma omp barrier
-  printf("Thread %d done and synchronized.\n", tid); 
+  //#pragma omp barrier // causes hang because only one thread sees the barrier here
 
 }
   

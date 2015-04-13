@@ -1,1 +1,12 @@
-omp_bug2.c --> "tid" should be a local variable. Or "tid" could be equal but needs to be initialized when each thread starts.
+omp_bug2.c --> "tid" should be a local variable. Or "tid" could be equal but needs to be initialized when each thread starts. We could also make "tid" private.
+
+omp_bug3.c --> A barrier is set in "print_results" function. But
+"print_results" is called in "omp section" where only on thread sees
+this barrier so that it would hang there, but other threads cannot see this
+barrier. 
+
+omp_bug4.c --> a[N][N] is too big to fit in thread private memory
+
+omp_bug5.c --> need to release locks before other calls the same lock
+
+omp_bug6.c --> sum needs to be a global variable, otherwise each thread initiates its own copy

@@ -8,7 +8,7 @@
 #include <omp.h>
 #include <stdio.h>
 #include <stdlib.h>
-#define N 1048
+#define N 512 // change to a small value so that the array fits locally
 
 int main (int argc, char *argv[]) 
 {
