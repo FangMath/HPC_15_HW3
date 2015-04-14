@@ -1,9 +1,10 @@
 #!/bin/bash
-#SBATCH -J fang2048 	    # job name
-#SBATCH -o fang2048.o           # output and error file name (%j expands to jobID)
-#SBATCH -n 16		    # total number of mpi tasks requested
+#SBATCH -J jacobi1e7N32		# job name
+#SBATCH -o jacobi1e7N32.o           # output and error file name (%j expands to jobID)
+#SBATCH -n 1		    # total number of mpi tasks requested
+#SBATCH -N 1		    # total number of mpi tasks requested
 #SBATCH -p normal 	    # queue (partition) -- normal, development, etc.
 #SBATCH -t 00:30:00         # run time (hh:mm:ss) - 1.5 hours
 #SBATCH -A TG-ASC150003     # account number
-export OMP_NUM_THREADS=8    # omp environment variable
-./gs-omp 100000 	    # run the MPI executable named a.out
+export OMP_NUM_THREADS=32 	# omp environment variable
+./jacobi-omp 10000000 	    # run the MPI executable named a.out

@@ -12,3 +12,17 @@ omp_bug4.c --> a[N][N] is too big to fit in thread private memory
 omp_bug5.c --> need to release locks before other calls the same lock
 
 omp_bug6.c --> sum needs to be a global variable, otherwise each thread initiates its own copy
+
+
+************************************************************
+Prob2:
+
+The time plot is included in this folder.
+
+1. Good scaling when number of threads is less than 8 (does the node only have
+8 threads at most? I've no idea how to request fat nodes...)
+
+2. Jacobi is slightly faster than GS, which is because GS is "half" paralled
+compared to Jacobi.
+
+2. I couldn't get icc compiler work...

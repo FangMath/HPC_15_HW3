@@ -1,0 +1,14 @@
+Program will terminate after 1000 iterations.
+Residual presented every 100 iterations.
+Number of threads = 256
+After 100 iterations, the norm of residule is 3.162286e+03, decreased 1.000002e+00 
+After 200 iterations, the norm of residule is 3.162295e+03, decreased 1.000005e+00 
+After 300 iterations, the norm of residule is 3.162304e+03, decreased 1.000008e+00 
+After 400 iterations, the norm of residule is 3.162313e+03, decreased 1.000011e+00 
+After 500 iterations, the norm of residule is 3.162323e+03, decreased 1.000014e+00 
+After 600 iterations, the norm of residule is 3.162332e+03, decreased 1.000017e+00 
+After 700 iterations, the norm of residule is 3.162342e+03, decreased 1.000020e+00 
+After 800 iterations, the norm of residule is 3.162352e+03, decreased 1.000023e+00 
+After 900 iterations, the norm of residule is 3.162361e+03, decreased 1.000026e+00 
+After 1000 iterations, the norm of residule is 3.162371e+03, decreased 1.000030e+00 
+Time elapsed is 14.783507 seconds.
