@@ -14,7 +14,7 @@ http://computing.llnl.gov/tutorials/openMP/exercise.html
 **************** for prob2 ***************
 * Second time login
 ssh tg827502@stampede.tacc.utexas.edu
-FFff
+3.........FFff
 
 sbatch job
 
